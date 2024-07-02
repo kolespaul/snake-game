@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div id="popup" class="popup">
+            <h2>Play Snake?</h2>
+            <div id="popupButtons" class="popupButtons">
+                <button id="yesButton" class="button">Yes</button>
+                <button id="noButton" class="button">No</button>
+            </div>
+        </div>
+
+        <div id="page-content">
+            <div id="video-container">
+              <video id="video-element"></video>
+              <div id="ad-container"></div>
+            </div>
+            <div id="timer" class="timer">
+                <div>Time remain:</div>
+                <div id="timerCounter" class="timerCounter"></div>
+            </div>
+            <div id="skip" class="skip">
+                <button id="skipButton" class="button">Skip ad</button>
+            </div>
+        </div>
+
+        <div id="gameContainer" class="gameContainer">
+            <canvas id="gameBoard" class="gameBoard" width="720" height="720"></canvas>
+            <div id="resetPopup" class="resetPopup">
+                <h2>Game over!</h2>
+                <button id="resetButton" class="button">Reset</button>
+            </div>
+            <div id="scoreAndMaxScore" class="scoreAndMaxScore">
+                <div id="score" class="score">
+                    <div id="scoreTitle" class="scoreTitle">Score: </div>
+                    <div id="scoreText" class="scoreText">0</div>
+                </div>
+                <div id="maxScore" class="maxScore">
+                    <div id="maxScoreTitle" class="maxScoreTitle">maxScore: </div>
+                    <div id="maxScoreText" class="maxScoreText">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="controls" class="controls">
+            <b>Controls: </b>
+            <br><br>
+            <p>Up: &uarr;</p>
+            <p>Right: &rarr;</p>
+            <p>Down: &darr;</p>
+            <p>Left: &larr;</p>
+            <p>Yes|No: &#9166;</p>
+            <p>Back: &#9243;</p>
+            <br>
+            <i>Note: Clicks works for Skip ad button only</i>
+        </div>
+    </div>
+    <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="index.js"></script>
+    <script src="ads.js"></script>
+    <script src="popup.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
